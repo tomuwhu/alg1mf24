@@ -34,7 +34,7 @@
         </th>
         <td>
           {#each f[1].mo as hallg}
-            <a target="_blank" href={hallg}>{hallg}</a>
+            <a target="_blank" href={h[hallg]}>{hallg}</a>
           {/each}
         </td>
       </tr>
