@@ -43,6 +43,18 @@
       mo: ["Sámfira Gábor"],
     },
   };
+  const kisz = [
+    [
+      'https://hrcdn.net/fcore/assets/brand/logo-new-white-green-a5cb16e0ae.svg', 
+      'hackerrank',
+      'https://www.hackerrank.com/'
+    ],
+    [
+      'https://stx1.spoj.com/gfx/2015e.png', 
+      'spoj',
+      'https://www.spoj.com/'
+    ]
+  ]
 </script>
 
 <main>
@@ -50,15 +62,26 @@
   <table>
     {#each Object.entries(mf) as f}
       <tr>
-        <th>
+        <td>
+          {#each kisz as k}
+            {#if f[1].fl.includes(k[1])}
+              <a href={k[2]} target="_blank">
+                <img src={k[0]} alt={k[1]}>
+              </a>
+            {/if}
+          {/each}
+        </td>
+        <th>         
           <a target="_blank" href={f[1].fl}>{f[0]}</a> 
-          <span>({mf[f[0]].type})</span>:
         </th>
         <td>
+           <span>({mf[f[0]].type})</span>:
+        </td>
+        <th>
           {#each f[1].mo as hallg}
             <a target="_blank" href={h[hallg]}>{hallg}</a>
           {/each}
-        </td>
+        </th>
       </tr>
     {/each}
   </table>
@@ -80,5 +103,8 @@
   }
   a {
     padding-left: 20px;
+  }
+  img {
+    width: 104px;
   }
 </style>
