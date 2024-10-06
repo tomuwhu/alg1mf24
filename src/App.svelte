@@ -12,32 +12,32 @@
     "Sámfira Gábor": "https://github.com/Infinity42o/L-Algoritmusok-s-adatszerkezetek"
   };
   const mf = {
-    HR0Lily: {
+    "Lily's Homework": {
       type: ft.a,
       fl: "https://www.hackerrank.com/challenges/lilys-homework/problem?isFullScreen=true",
       mo: ["Urbán Ákos"],
     },
-    HR0Stone_Division: {
+    "Stone Division": {
       type: ft.b,
       fl: "https://www.hackerrank.com/challenges/lilys-homework/problem?isFullScreen=true",
       mo: ["Urbán Ákos"],
     },
-    Gridland_Metro: {
+    "Gridland Metro": {
       type: ft.a,
       fl: "https://www.hackerrank.com/challenges/gridland-metro/problem",
       mo: ["Sámfira Gábor"],
     },
-    Crossword_Puzzle: {
+    "Crossword Puzzle": {
       type: ft.b,
       fl: "https://www.hackerrank.com/challenges/crossword-puzzle/problem",
       mo: ["Sámfira Gábor"],
     },
-    Sherlock_and_Cost: {
+    "Sherlock and Cost": {
       type: ft.c,
       fl: "https://www.hackerrank.com/challenges/sherlock-and-cost/problem",
       mo: ["Sámfira Gábor"],
     },
-    Even_Tree: {
+    "Even Tree": {
       type: ft.d,
       fl: "https://www.hackerrank.com/challenges/even-tree/problem",
       mo: ["Sámfira Gábor"],
@@ -60,7 +60,7 @@
 <main>
   <h1>Leadott (elkelt) feladatok</h1>
   <table>
-    {#each Object.entries(mf) as f}
+    {#each Object.entries(mf).sort() as f}
       <tr>
         <td>
           {#each kisz as k}
