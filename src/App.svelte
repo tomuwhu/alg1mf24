@@ -14,12 +14,12 @@
   const mf = {
     "Lily's Homework": {
       type: ft.a,
-      fl: "https://www.hackerrank.com/challenges/lilys-homework/problem?isFullScreen=true",
+      fl: "https://www.hackerrank.com/challenges/lilys-homework/problem",
       mo: ["Urbán Ákos"],
     },
     "Stone Division": {
       type: ft.b,
-      fl: "https://www.hackerrank.com/challenges/lilys-homework/problem?isFullScreen=true",
+      fl: "https://www.hackerrank.com/challenges/lilys-homework/problem",
       mo: ["Urbán Ákos"],
     },
     "Gridland Metro": {
