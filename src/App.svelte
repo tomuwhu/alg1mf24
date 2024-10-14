@@ -92,7 +92,8 @@
 <main>
   <h1>Leadott (elkelt) feladatok - <input type="text" bind:value={filt} placeholder="Szűrés"></h1>
   <table>
-    {#each Object.entries(mf).filter(a => a[0].includes(filt)) as f}
+    {#each Object.entries(mf).filter(a => 
+      a[0].toLowerCase().includes(filt.toLowerCase())) as f}
       <tr>
         <td>
           {#each kisz as k}
