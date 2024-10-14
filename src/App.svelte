@@ -1,5 +1,6 @@
 <script>
   // @ts-nocheck
+  var filt = ""
   const ft = {
     a: "Keresés, rendezés",
     b: "Rekurzzióval megoldható feladatok",
@@ -89,9 +90,9 @@
 </script>
 
 <main>
-  <h1>Leadott (elkelt) feladatok</h1>
+  <h1>Leadott (elkelt) feladatok - <input type="text" bind:value={filt} placeholder="Szűrés"></h1>
   <table>
-    {#each Object.entries(mf) as f}
+    {#each Object.entries(mf).filter(a => a[0].includes(filt)) as f}
       <tr>
         <td>
           {#each kisz as k}
@@ -119,6 +120,9 @@
 </main>
 
 <style>
+  input {
+    font-size: 16px;
+  }
   span {
     font-size: 10px;
     color: gray;
