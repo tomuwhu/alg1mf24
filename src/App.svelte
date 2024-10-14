@@ -10,6 +10,7 @@
   const h = {
     "dr. Báthori Endre":
       "https://github.com/bathoriendre/algoritmusok/blob/main/TaskAndDeadlines.md",
+    "Kezes Rudolf Sámson": "https://github.com/Zorahk/alga_hazik",
     "Urbán Ákos": "https://github.com/akosh25/algoritmusok",
     "Sámfira Gábor":
       "https://github.com/Infinity42o/L-Algoritmusok-s-adatszerkezetek",
@@ -34,6 +35,16 @@
       type: ft.a,
       fl: "https://cses.fi/problemset/task/1630",
       mo: ["dr. Báthori Endre"],
+    },
+    "Towers": {
+      ype: ft.a,
+      fl: "https://cses.fi/problemset/task/1073",
+      mo: ["Kezes Rudolf Sámson"],
+    },
+    "The Power Sum": {
+      ype: ft.b,
+      fl: "https://www.hackerrank.com/challenges/the-power-sum/problem",
+      mo: ["Kezes Rudolf Sámson"],
     },
     "Gridland Metro": {
       type: ft.a,
