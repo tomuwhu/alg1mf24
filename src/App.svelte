@@ -95,7 +95,7 @@
     {#each Object.entries(mf).filter(a => 
       a[0].toLowerCase().includes(filt.toLowerCase())) as f}
       <tr>
-        <td>
+        <td class=imgph>
           {#each kisz as k}
             {#if f[1].fl.toLocaleLowerCase().includes(k[1].toLocaleLowerCase())}
               <a href={k[2]} target="_blank">
@@ -121,8 +121,15 @@
 </main>
 
 <style>
+  .imgph {
+    background-color: #242424;
+    padding-right: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px #242424;
+  }
   input {
     font-size: 16px;
+    border-radius: 6px;
   }
   span {
     font-size: 10px;
