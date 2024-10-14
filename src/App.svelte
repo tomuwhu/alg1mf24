@@ -8,19 +8,32 @@
     e: "SPOJ/OKTV",
   };
   const h = {
+    "dr. Báthori Endre":
+      "https://github.com/bathoriendre/algoritmusok/blob/main/TaskAndDeadlines.md",
     "Urbán Ákos": "https://github.com/akosh25/algoritmusok",
-    "Sámfira Gábor": "https://github.com/Infinity42o/L-Algoritmusok-s-adatszerkezetek"
+    "Sámfira Gábor":
+      "https://github.com/Infinity42o/L-Algoritmusok-s-adatszerkezetek",
   };
   const mf = {
-    "Lily's Homework": {
-      type: ft.a,
-      fl: "https://www.hackerrank.com/challenges/lilys-homework/problem",
-      mo: ["Urbán Ákos"],
+    "Mail Delivery": {
+      ype: ft.d,
+      fl: "https://cses.fi/problemset/task/1691",
+      mo: ["dr. Báthori Endre"],
     },
-    "Stone Division": {
-      type: ft.b,
-      fl: "https://www.hackerrank.com/challenges/lilys-homework/problem",
-      mo: ["Urbán Ákos"],
+    "Edit Distance": {
+      ype: ft.c,
+      fl: "https://cses.fi/problemset/task/1639",
+      mo: ["dr. Báthori Endre"],
+    },
+    "Tree Traversals": {
+      ype: ft.b,
+      fl: "https://cses.fi/problemset/task/1702",
+      mo: ["dr. Báthori Endre"],
+    },
+    "Tasks and Deadlines": {
+      type: ft.a,
+      fl: "https://cses.fi/problemset/task/1630",
+      mo: ["dr. Báthori Endre"],
     },
     "Gridland Metro": {
       type: ft.a,
@@ -42,40 +55,47 @@
       fl: "https://www.hackerrank.com/challenges/even-tree/problem",
       mo: ["Sámfira Gábor"],
     },
+    "Lily's Homework": {
+      type: ft.a,
+      fl: "https://www.hackerrank.com/challenges/lilys-homework/problem",
+      mo: ["Urbán Ákos"],
+    },
+    "Stone Division": {
+      type: ft.b,
+      fl: "https://www.hackerrank.com/challenges/lilys-homework/problem",
+      mo: ["Urbán Ákos"],
+    },
   };
   const kisz = [
+    ["https://cses.fi/logo.png?1", "CSES", "https://cses.fi/problemset/"],
     [
-      'https://hrcdn.net/fcore/assets/brand/logo-new-white-green-a5cb16e0ae.svg', 
-      'hackerrank',
-      'https://www.hackerrank.com/'
+      "https://hrcdn.net/fcore/assets/brand/logo-new-white-green-a5cb16e0ae.svg",
+      "hackerrank",
+      "https://www.hackerrank.com/",
     ],
-    [
-      'https://stx1.spoj.com/gfx/2015e.png', 
-      'spoj',
-      'https://www.spoj.com/'
-    ]
-  ]
+    ["https://stx1.spoj.com/gfx/2015e.png", "spoj", "https://www.spoj.com/"],
+  ];
 </script>
 
 <main>
   <h1>Leadott (elkelt) feladatok</h1>
   <table>
-    {#each Object.entries(mf).sort() as f}
+    {#each Object.entries(mf) as f}
       <tr>
         <td>
           {#each kisz as k}
-            {#if f[1].fl.includes(k[1])}
+            {#if f[1].fl.toLocaleLowerCase().includes(k[1].toLocaleLowerCase())}
               <a href={k[2]} target="_blank">
-                <img src={k[0]} alt={k[1]}>
+                <img class={k[1].toLocaleLowerCase()} src={k[0]} alt={k[1]} />
               </a>
             {/if}
           {/each}
         </td>
-        <th>         
-          <a target="_blank" href={f[1].fl}>{f[0]}</a> 
+        <th>
+          <a target="_blank" href={f[1].fl}>{f[0]}</a>
         </th>
         <td>
-           <span>({mf[f[0]].type})</span>:
+          <span>({mf[f[0]].type})</span>:
         </td>
         <th>
           {#each f[1].mo as hallg}
@@ -90,7 +110,7 @@
 <style>
   span {
     font-size: 10px;
-    color:gray;
+    color: gray;
   }
   h1 {
     font-size: 20px;
@@ -106,5 +126,9 @@
   }
   img {
     width: 104px;
+  }
+  img.cses {
+    width: 64px;
+    height: 20px;
   }
 </style>
