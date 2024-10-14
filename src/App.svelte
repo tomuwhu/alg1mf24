@@ -17,17 +17,17 @@
   };
   const mf = {
     "Mail Delivery": {
-      ype: ft.d,
+      type: ft.d,
       fl: "https://cses.fi/problemset/task/1691",
       mo: ["dr. Báthori Endre"],
     },
     "Edit Distance": {
-      ype: ft.c,
+      type: ft.c,
       fl: "https://cses.fi/problemset/task/1639",
       mo: ["dr. Báthori Endre"],
     },
     "Tree Traversals": {
-      ype: ft.b,
+      type: ft.b,
       fl: "https://cses.fi/problemset/task/1702",
       mo: ["dr. Báthori Endre"],
     },
@@ -37,12 +37,12 @@
       mo: ["dr. Báthori Endre"],
     },
     "Towers": {
-      ype: ft.a,
+      type: ft.a,
       fl: "https://cses.fi/problemset/task/1073",
       mo: ["Kezes Rudolf Sámson"],
     },
     "The Power Sum": {
-      ype: ft.b,
+      type: ft.b,
       fl: "https://www.hackerrank.com/challenges/the-power-sum/problem",
       mo: ["Kezes Rudolf Sámson"],
     },
