@@ -77,6 +77,16 @@
       fl: "https://www.hackerrank.com/challenges/lilys-homework/problem",
       mo: ["Urbán Ákos"],
     },
+    "Roads and Libraries" : {
+      type: ft.c,
+      fl: "https://www.hackerrank.com/challenges/stockmax/problem",
+      mo: ["Urbán Ákos"],
+    },
+    "Stock Maximize" : {
+      type: ft.d,
+      fl: "https://www.hackerrank.com/challenges/torque-and-development/problem",
+      mo: ["Urbán Ákos"],
+    },
   };
   const kisz = [
     ["https://cses.fi/logo.png?1", "CSES", "https://cses.fi/problemset/"],
