@@ -9,6 +9,8 @@
     e: "SPOJ/OKTV",
   };
   const h = {
+    "Dékány Tamás": "https://github.com/dekany01/Algoritmusok",
+    "Gyenes Lídia": "https://github.com/Lydiagyenes/alga",
     "dr. Báthori Endre":
       "https://github.com/bathoriendre/algoritmusok/blob/main/TaskAndDeadlines.md",
     "Kezes Rudolf Sámson": "https://github.com/Zorahk/alga_hazik",
@@ -17,6 +19,16 @@
       "https://github.com/Infinity42o/L-Algoritmusok-s-adatszerkezetek",
   };
   const mf = {
+    "Ice Cream Parlor": {
+      type: ft.a,
+      fl: "https://www.hackerrank.com/challenges/icecream-parlor/problem",
+      mo: ["Gyenes Lídia"]
+    },
+    "Recursive Digit Sum": {
+      type: ft.b,
+      fl: "https://www.hackerrank.com/challenges/recursive-digit-sum/problem",
+      mo: ["Dékány Tamás"],
+    },
     "Mail Delivery": {
       type: ft.d,
       fl: "https://cses.fi/problemset/task/1691",
