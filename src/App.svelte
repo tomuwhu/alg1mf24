@@ -9,6 +9,7 @@
     e: "SPOJ/OKTV",
   };
   const h = {
+    "Vígh-Mácsai Zsanett": "https://vigzs.github.io/Algoritmusok--s-adatszerkezetek-beadand-/",
     "Dékány Tamás": "https://github.com/dekany01/Algoritmusok",
     "Gyenes Lídia": "https://github.com/Lydiagyenes/alga",
     "dr. Báthori Endre":
@@ -19,6 +20,26 @@
       "https://github.com/Infinity42o/L-Algoritmusok-s-adatszerkezetek",
   };
   const mf = {
+    "Családfa": {
+      type: ft.d,
+      fl: "https://mester.inf.elte.hu:8181/faces/leiras.xhtml?jfwid=e14b800137b830f1fcf95ed69687:196",
+      mo: ["Vígh-Mácsai Zsanett"]
+    },
+    "Dice Combinations": {
+      type: ft.c,
+      fl: "https://cses.fi/problemset/task/1633",
+      mo: ["Vígh-Mácsai Zsanett"]
+    },
+    "CODEM4 - Problem4": {
+      type: ft.b,
+      fl: "https://www.spoj.com/problems/CODEM4/cstart=20",
+      mo: ["Vígh-Mácsai Zsanett"]
+    },
+    "Distinct Numbers": {
+      type: ft.a,
+      fl: "https://cses.fi/problemset/task/1621",
+      mo: ["Vígh-Mácsai Zsanett"]
+    },
     "Ice Cream Parlor": {
       type: ft.a,
       fl: "https://www.hackerrank.com/challenges/icecream-parlor/problem",
@@ -108,6 +129,7 @@
       "https://www.hackerrank.com/",
     ],
     ["https://stx1.spoj.com/gfx/2015e.png", "spoj", "https://www.spoj.com/"],
+    ["./mester.png", "mester", "https://mester.inf.elte.hu/"],
   ];
 </script>
 
@@ -175,5 +197,16 @@
   img.cses {
     width: 64px;
     height: 20px;
+  }
+  img.spoj {
+    background-color: aliceblue;
+    padding: 2px 9px;
+    border-radius: 6px;
+  }
+  img.mester {
+    width: 66px;
+    border-radius: 6px;
+    background-color: rgb(238, 234, 218);
+    padding: 0px 9px;
   }
 </style>
