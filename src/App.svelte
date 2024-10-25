@@ -9,6 +9,7 @@
     e: "SPOJ/OKTV",
   };
   const h = {
+    "Temesvári Ráhel Anna": "https://rahelanna.github.io/Algoritmusok-es-adatszerkezetek/",
     "Vígh-Mácsai Zsanett": "https://vigzs.github.io/Algoritmusok--s-adatszerkezetek-beadand-/",
     "Dékány Tamás": "https://github.com/dekany01/Algoritmusok",
     "Gyenes Lídia": "https://github.com/Lydiagyenes/alga",
@@ -20,6 +21,21 @@
       "https://github.com/Infinity42o/L-Algoritmusok-s-adatszerkezetek",
   };
   const mf = {
+    "Minimum Loss": {
+      type: ft.a,
+      fl: "https://www.hackerrank.com/challenges/minimum-loss/problem",
+      mo: ["Temesvári Ráhel Anna"]
+    },
+    "The Coin Change Problem": {
+      type: ft.c,
+      fl: "https://www.hackerrank.com/challenges/coin-change/problem",
+      mo: ["Temesvári Ráhel Anna"]
+    },
+    "Journey to the Moon": {
+      type: ft.d,
+      fl: "https://www.hackerrank.com/challenges/journey-to-the-moon/problem",
+      mo: ["Temesvári Ráhel Anna"]
+    },
     "Családfa": {
       type: ft.d,
       fl: "https://mester.inf.elte.hu:8181/faces/leiras.xhtml?jfwid=e14b800137b830f1fcf95ed69687:196",
