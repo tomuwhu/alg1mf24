@@ -1,6 +1,7 @@
 <script>
   // @ts-nocheck
   var filt = ""
+  var st
   const ft = {
     a: "Keresés, rendezés",
     b: "Rekurzzióval megoldható feladatok",
@@ -22,7 +23,8 @@
     "Sámfira Gábor":
       "https://github.com/Infinity42o/L-Algoritmusok-s-adatszerkezetek",
   };
-  const mf = {
+  var mf
+  const mfa = {
     "KnightL on a Chessboard": {
       type: ft.a,
       fl: "https://www.hackerrank.com/challenges/knightl-on-chessboard/problem?isFullScreen=false",
@@ -153,7 +155,8 @@
       fl: "https://www.hackerrank.com/challenges/torque-and-development/problem",
       mo: ["Urbán Ákos"],
     },
-  };
+  }
+  mf = mfa
   const kisz = [
     ["https://cses.fi/logo.png?1", "CSES", "https://cses.fi/problemset/"],
     [
@@ -167,7 +170,23 @@
 </script>
 
 <main>
-  <h1>Leadott (elkelt) feladatok - <input type="text" bind:value={filt} placeholder="Szűrés"></h1>
+  <h1>Leadott (elkelt) feladatok - <input type="text" bind:value={filt} placeholder="Szűrés"> - 
+  <select bind:value={st} on:change={() => {
+      if (st === '-') {
+        mf = mfa
+        return
+      }
+      mf = {}
+      Object.entries(mfa).filter(a => 
+        a[1].type == ft[st]
+      ).forEach(v => mf[v[0]] = v[1])
+    }}>
+    <option value="-">Minden típus</option>
+    {#each Object.entries(ft) as type}
+      <option value={type[0]}>{type[1]}</option>
+    {/each}
+  </select>
+  </h1>
   <table>
     {#each Object.entries(mf).filter(a => 
       a[0].toLowerCase().includes(filt.toLowerCase())) as f}
