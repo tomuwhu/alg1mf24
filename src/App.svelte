@@ -9,6 +9,8 @@
     e: "SPOJ/OKTV",
   };
   const h = {
+    "Béleczki Ádám": "https://github.com/Adee81/Algoritmusok/tree/main/04_Fak_Grafok",
+    "Ádám Róbert Gábor": "https://adamrobert77.github.io/L_Algoritmusok_es_adatszerkezetek_I/",
     "Temesvári Ráhel Anna": "https://rahelanna.github.io/Algoritmusok-es-adatszerkezetek/",
     "Vígh-Mácsai Zsanett": "https://vigzs.github.io/Algoritmusok--s-adatszerkezetek-beadand-/",
     "Dékány Tamás": "https://github.com/dekany01/Algoritmusok",
@@ -21,6 +23,21 @@
       "https://github.com/Infinity42o/L-Algoritmusok-s-adatszerkezetek",
   };
   const mf = {
+    "KnightL on a Chessboard": {
+      type: ft.a,
+      fl: "https://www.hackerrank.com/challenges/knightl-on-chessboard/problem?isFullScreen=false",
+      mo: ["Béleczki Ádám"]
+    },
+    "Greedy Florist": {
+      type: ft.a,
+      fl: "https://www.hackerrank.com/challenges/greedy-florist/problem",
+      mo: ["Ádám Róbert Gábor"]
+    },
+    "Password Cracker": {
+      type: ft.b,
+      fl: "https://www.hackerrank.com/challenges/password-cracker/problem",
+      mo: ["Ádám Róbert Gábor"]
+    },
     "Minimum Loss": {
       type: ft.a,
       fl: "https://www.hackerrank.com/challenges/minimum-loss/problem",
