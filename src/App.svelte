@@ -10,6 +10,8 @@
     e: "SPOJ/OKTV",
   };
   const h = {
+    "Rafael Anita Ilona": "https://r-anita.github.io/Alga/",
+    "Dr. Nébl Anita": "https://nebl-annamaria.github.io/",
     "Béleczki Ádám": "https://github.com/Adee81/Algoritmusok/tree/main/04_Fak_Grafok",
     "Ádám Róbert Gábor": "https://adamrobert77.github.io/L_Algoritmusok_es_adatszerkezetek_I/",
     "Temesvári Ráhel Anna": "https://rahelanna.github.io/Algoritmusok-es-adatszerkezetek/",
@@ -25,6 +27,23 @@
   };
   var mf
   const mfa = {
+    /*
+    "": {
+      type: ft.a,
+      fl: "",
+      mo: [""]
+    },
+    */
+    "Pairs": {
+      type: ft.a,
+      fl: "https://www.hackerrank.com/challenges/pairs/problem",
+      mo: ["Rafael Anita Ilona"]
+    },
+    "Apartments": {
+      type: ft.a,
+      fl: "https://cses.fi/problemset/task/1084",
+      mo: ["Dr. Nébl Anita"]
+    },
     "KnightL on a Chessboard": {
       type: ft.a,
       fl: "https://www.hackerrank.com/challenges/knightl-on-chessboard/problem?isFullScreen=false",
