@@ -1,7 +1,7 @@
 <script>
   // @ts-nocheck
   var filt = ""
-  var st
+  var st, sh
   const ft = {
     a: "Keresés, rendezés",
     b: "Rekurzzióval megoldható feladatok",
@@ -10,6 +10,7 @@
     e: "SPOJ/OKTV",
   };
   const h = {
+    "Marschall Gábor": "https://github.com/CaTwoPlus/alga_I",
     "Rafael Anita Ilona": "https://r-anita.github.io/Alga/",
     "Dr. Nébl Anita": "https://nebl-annamaria.github.io/",
     "Béleczki Ádám": "https://github.com/Adee81/Algoritmusok/tree/main/04_Fak_Grafok",
@@ -34,6 +35,31 @@
       mo: [""]
     },
     */
+    "Red John is Back": {
+      type: ft.c,
+      fl: "https://www.hackerrank.com/challenges/red-john-is-back/problem",
+      mo: ["Marschall Gábor"]
+    },
+    "Breadth First Search: Shortest Reach": {
+      type: ft.d,
+      fl: "https://www.hackerrank.com/challenges/bfsshortreach/problem",
+      mo: ["Marschall Gábor"]
+    },
+    "Max Min": {
+      type: ft.a,
+      fl: "https://www.hackerrank.com/challenges/angry-children/problem",
+      mo: ["Dékány Tamás"]
+    },
+    "Fibonacci Modified": {
+      type: ft.c,
+      fl: "https://www.hackerrank.com/challenges/fibonacci-modified/problem",
+      mo: ["Dékány Tamás"]
+    },
+    "Lego Blocks": {
+      type: ft.c,
+      fl: "https://www.hackerrank.com/challenges/lego-blocks/problem",
+      mo: ["Dékány Tamás"]
+    },
     "Pairs": {
       type: ft.a,
       fl: "https://www.hackerrank.com/challenges/pairs/problem",
@@ -205,6 +231,21 @@
       <option value={type[0]}>{type[1]}</option>
     {/each}
   </select>
+  <select bind:value={sh} on:change={() => {
+    if (sh === '-') {
+      mf = mfa
+      return
+    }
+    mf = {}
+    Object.entries(mfa).filter(a => 
+      a[1].mo.includes(sh)
+    ).forEach(v => mf[v[0]] = v[1])
+  }}>
+  <option value="-">Minden hallgató</option>
+  {#each Object.entries(h) as type}
+    <option value={type[0]}>{type[0]}</option>
+  {/each}
+</select>
   </h1>
   <table>
     {#each Object.entries(mf).filter(a => 
@@ -236,6 +277,11 @@
 </main>
 
 <style>
+  select {
+    font-size: 16px;
+    padding: 3px;
+    border-radius: 6px;
+  }
   .imgph {
     background-color: #242424;
     padding-right: 20px;
@@ -245,6 +291,8 @@
   input {
     font-size: 16px;
     border-radius: 6px;
+    padding: 4px;
+    border:solid 1px rgb(120, 120, 120);
   }
   span {
     font-size: 10px;
