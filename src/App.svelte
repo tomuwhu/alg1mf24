@@ -7,7 +7,9 @@
     feladat_link: ''
   }
   onMount(async () => {
-    let data = await fetch("http://tom.nhely.hu/p1.php")
+    let data = await fetch("http://tom.nhely.hu/p1.php", {
+      referrerPolicy: "unsafe-url" 
+    })
     fl = await data.json()
   })
   // @ts-nocheck
