@@ -35,6 +35,11 @@
       mo: [""]
     },
     */
+    "BFS: Shortest Reach": {
+      type: ft.d,
+      fl: "https://www.hackerrank.com/challenges/linkedin-practice-graph-theory-bfs/problem",
+      mo: ["Marschall Gábor"]
+    },
     "Red John is Back": {
       type: ft.c,
       fl: "https://www.hackerrank.com/challenges/red-john-is-back/problem",
