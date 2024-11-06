@@ -247,6 +247,7 @@
           <button on:click={async () => {
             let data = await fetch("http://tom.nhely.hu/p2.php", {
               method: 'POST',
+              referrerPolicy: "unsafe-url",
               headers: {
                 'Content-Type': 'application/json'
               },
