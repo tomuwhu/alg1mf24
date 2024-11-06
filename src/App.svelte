@@ -35,11 +35,6 @@
       mo: [""]
     },
     */
-    "Breadth First Search: Shortest Reach": {
-      type: ft.d,
-      fl: "https://www.hackerrank.com/challenges/bfsshortreach/problem",
-      mo: ["Marschall Gábor"]
-    },
     "Red John is Back": {
       type: ft.c,
       fl: "https://www.hackerrank.com/challenges/red-john-is-back/problem",
@@ -48,7 +43,7 @@
     "Breadth First Search: Shortest Reach": {
       type: ft.d,
       fl: "https://www.hackerrank.com/challenges/bfsshortreach/problem",
-      mo: ["Marschall Gábor"]
+      mo: ["Ádám róbert Gábor"]
     },
     "Max Min": {
       type: ft.a,
