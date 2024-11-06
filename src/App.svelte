@@ -7,7 +7,7 @@
     feladat_link: ''
   }
   onMount(async () => {
-    let data = await fetch("https://tom.nhely.hu/p1.php")
+    let data = await fetch("https://szte.eu/p1.php")
     fl = await data.json()
   })
   // @ts-nocheck
@@ -243,7 +243,7 @@
       <td class="button">
         {#if (fogl.hallg && fogl.feladat && fogl.feladat_link)}
           <button on:click={async () => {
-            let data = await fetch("https://tom.nhely.hu/p2.php", {
+            let data = await fetch("https://szte.eu/p2.php", {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'
