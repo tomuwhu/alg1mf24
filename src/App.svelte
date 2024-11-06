@@ -226,7 +226,7 @@
 </script>
 
 <main>
-  <h1>Coospace-re feltöltött problema hozzáadása</h1>
+  <h1>Beadott problema hozzáadása (foglalt lett....)</h1>
   <table>
     <tr>
       <td>
@@ -236,11 +236,11 @@
             <td><input class="fel" type="text" bind:value={fogl.feladat} placeholder="Feladat neve"></td>
           </tr>
           <tr>
-            <td colspan=2><input class="link" type="text" bind:value={fogl.feladat_link} placeholder="Feladat link"></td>
+            <td colspan=2 ><input class="link" type="text" bind:value={fogl.feladat_link} placeholder="Feladat link"></td>
           </tr>
         </table>
       </td>
-      <td>
+      <td class="button">
         {#if (fogl.hallg && fogl.feladat && fogl.feladat_link)}
           <button on:click={async () => {
             let data = await fetch("http://tom.nhely.hu/p2.php", {
@@ -267,10 +267,6 @@
       </td>
     </tr>
   </table>
-  
-  
-  
-  
   <h1>Leadott (elkelt) feladatok:<br>
   <input type="text" bind:value={filt} placeholder="Szűrés"> - 
   <select bind:value={st} on:change={() => {
@@ -423,5 +419,14 @@
   }
   input.hallg {
     width: 200px;
+  }
+  button:hover {
+    background-color: rgb(123, 33, 23);
+  }
+  td.button {
+    text-align: center;
+    background-color: #4e4949;
+    border-radius: 15px;
+    width: 257px;
   }
 </style>
