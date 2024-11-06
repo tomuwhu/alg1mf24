@@ -35,7 +35,7 @@
       mo: [""]
     },
     */
-    "BFS: Shortest Reach": {
+    "Breadth First Search: Shortest Reach": {
       type: ft.d,
       fl: "https://www.hackerrank.com/challenges/bfsshortreach/problem",
       mo: ["Marschall Gábor"]
