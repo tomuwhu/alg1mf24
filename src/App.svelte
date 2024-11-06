@@ -43,7 +43,7 @@
     "Breadth First Search: Shortest Reach": {
       type: ft.d,
       fl: "https://www.hackerrank.com/challenges/bfsshortreach/problem",
-      mo: ["Ádám róbert Gábor"]
+      mo: ["Ádám Róbert Gábor"]
     },
     "Max Min": {
       type: ft.a,
