@@ -316,7 +316,7 @@
           <a target="_blank" href={ff['feladat_link']}>{ff['feladat']}</a>
         </th>
         <td class="foly">
-          folyamatban...
+          Ellenőrzésre vár...
         </td>
         <th>
           <a target="_blank" href={h[ff['hallgato']]}>{ff['hallgato']}</a>
