@@ -1,4 +1,15 @@
 <script>
+  import { onMount } from "svelte";
+  var fl = []
+  var fogl = {
+    hallg: '',
+    feladat: '',
+    feladat_link: ''
+  }
+  onMount(async () => {
+    let data = await fetch("http://tom.nhely.hu/p1.php")
+    fl = await data.json()
+  })
   // @ts-nocheck
   var filt = ""
   var st, sh
@@ -215,7 +226,53 @@
 </script>
 
 <main>
-  <h1>Leadott (elkelt) feladatok - <input type="text" bind:value={filt} placeholder="Szűrés"> - 
+  <h1>Coospace-re feltöltött problema hozzáadása</h1>
+  <table>
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <td><input class="hallg" type="text" bind:value={fogl.hallg} placeholder="Hallgató neve"></td>
+            <td><input class="fel" type="text" bind:value={fogl.feladat} placeholder="Feladat neve"></td>
+          </tr>
+          <tr>
+            <td colspan=2><input class="link" type="text" bind:value={fogl.feladat_link} placeholder="Feladat link"></td>
+          </tr>
+        </table>
+      </td>
+      <td>
+        {#if (fogl.hallg && fogl.feladat && fogl.feladat_link)}
+          <button on:click={async () => {
+            let data = await fetch("http://tom.nhely.hu/p2.php", {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(fogl)
+            })
+            data = await data.json()
+            if (data.success) {
+              fogl.hallgato = fogl.hallg
+              delete fogl.hallg
+              fl.push(fogl)
+              fl = fl
+              fogl = {
+                hallg: '',
+                feladat: '',
+                feladat_link: ''
+              }
+            }
+          }}>Ezt leadtam (foglalt lett)...</button>
+        {/if}
+      </td>
+    </tr>
+  </table>
+  
+  
+  
+  
+  <h1>Leadott (elkelt) feladatok:<br>
+  <input type="text" bind:value={filt} placeholder="Szűrés"> - 
   <select bind:value={st} on:change={() => {
       if (st === '-') {
         mf = mfa
@@ -248,6 +305,28 @@
 </select>
   </h1>
   <table>
+    {#each fl as ff}
+      <tr>
+        <td class=imgph>
+          {#each kisz as k}
+            {#if ff['feladat_link'].toLocaleLowerCase().includes(k[1].toLocaleLowerCase())}
+              <a href={k[2]} target="_blank">
+                <img class={k[1].toLocaleLowerCase()} src={k[0]} alt={k[1]} />
+              </a>
+            {/if}
+          {/each}
+        </td>
+        <th>
+          <a target="_blank" href={ff['feladat_link']}>{ff['feladat']}</a>
+        </th>
+        <td class="foly">
+          folyamatban...
+        </td>
+        <th>
+          <a target="_blank" href={h[ff['hallgato']]}>{ff['hallgato']}</a>
+        </th>
+      </tr>
+    {/each}
     {#each Object.entries(mf).filter(a => 
       a[0].toLowerCase().includes(filt.toLowerCase())) as f}
       <tr>
@@ -296,7 +375,7 @@
   }
   span {
     font-size: 10px;
-    color: gray;
+    color: rgb(159, 211, 165);
   }
   h1 {
     font-size: 20px;
@@ -327,5 +406,22 @@
     border-radius: 6px;
     background-color: rgb(238, 234, 218);
     padding: 0px 9px;
+  }
+  button {
+    border: solid 1px white;
+    cursor: pointer;
+  }
+  td.foly {
+    font-size: 10px;
+    color: rgb(243, 186, 186);
+  }
+  input.link {
+    width: 650px;
+  }
+  input.fel {
+    width: 436px;
+  }
+  input.hallg {
+    width: 200px;
   }
 </style>
