@@ -7,11 +7,8 @@
     feladat_link: ''
   }
   onMount(async () => {
-    let data = await fetch("http://tom.nhely.hu/p1.php", {
-      referrerPolicy: "unsafe-url",
-      mode: 'no-cors',
-    })
-    fl = await data.json()
+    //let data = await fetch("https://tom.nhely.hu/p1.php")
+    //fl = await data.json()
   })
   // @ts-nocheck
   var filt = ""
@@ -229,6 +226,7 @@
 </script>
 
 <main>
+  <!--
   <h1>Beadott problema hozzáadása (foglalt lett....)</h1>
   <table>
     <tr>
@@ -246,10 +244,8 @@
       <td class="button">
         {#if (fogl.hallg && fogl.feladat && fogl.feladat_link)}
           <button on:click={async () => {
-            let data = await fetch("http://tom.nhely.hu/p2.php", {
+            let data = await fetch("https://tom.nhely.hu/p2.php", {
               method: 'POST',
-              referrerPolicy: "unsafe-url",
-              mode: 'no-cors',
               headers: {
                 'Content-Type': 'application/json'
               },
@@ -272,6 +268,7 @@
       </td>
     </tr>
   </table>
+  -->
   <h1>Leadott (elkelt) feladatok:<br>
   <input type="text" bind:value={filt} placeholder="Szűrés"> - 
   <select bind:value={st} on:change={() => {
