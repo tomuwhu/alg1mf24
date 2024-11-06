@@ -254,7 +254,7 @@
             if (data.success) {
               fogl.hallgato = fogl.hallg
               delete fogl.hallg
-              fl.push(fogl)
+              fl.unshift(fogl)
               fl = fl
               fogl = {
                 hallg: '',
