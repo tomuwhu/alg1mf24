@@ -7,8 +7,8 @@
     feladat_link: ''
   }
   onMount(async () => {
-    //let data = await fetch("https://tom.nhely.hu/p1.php")
-    //fl = await data.json()
+    let data = await fetch("https://tom.nhely.hu/p1.php")
+    fl = await data.json()
   })
   // @ts-nocheck
   var filt = ""
@@ -226,7 +226,6 @@
 </script>
 
 <main>
-  <!--
   <h1>Beadott problema hozzáadása (foglalt lett....)</h1>
   <table>
     <tr>
@@ -268,7 +267,6 @@
       </td>
     </tr>
   </table>
-  -->
   <h1>Leadott (elkelt) feladatok:<br>
   <input type="text" bind:value={filt} placeholder="Szűrés"> - 
   <select bind:value={st} on:change={() => {
