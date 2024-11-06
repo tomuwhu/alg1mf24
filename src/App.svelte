@@ -8,7 +8,8 @@
   }
   onMount(async () => {
     let data = await fetch("http://tom.nhely.hu/p1.php", {
-      referrerPolicy: "unsafe-url" 
+      referrerPolicy: "unsafe-url",
+      mode: 'no-cors',
     })
     fl = await data.json()
   })
@@ -248,6 +249,7 @@
             let data = await fetch("http://tom.nhely.hu/p2.php", {
               method: 'POST',
               referrerPolicy: "unsafe-url",
+              mode: 'no-cors',
               headers: {
                 'Content-Type': 'application/json'
               },
