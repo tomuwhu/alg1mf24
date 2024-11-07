@@ -16,7 +16,8 @@
     c: "Dinamikus programozással megoldható feladat",
     d: "Fa- és gráfalgoritmusos feladatok",
     e: "SPOJ/OKTV",
-    h: "- Nincs beadva a CooSpace-en! -"
+    h: "- Nincs beadva a CooSpace-en! -",
+    u: "- Feladat ütközés! -"
   };
   const h = {
     "Marschall Gábor": "https://github.com/CaTwoPlus/alga_I",
@@ -244,7 +245,10 @@
         <table>
           <tr>
             <td><input class="hallg" type="text" bind:value={fogl.hallg} placeholder="Hallgató neve"></td>
-            <td><input class="fel" type="text" bind:value={fogl.feladat} placeholder="Feladat címe"></td>
+            <td><input class="fel" type="text" bind:value={fogl.feladat} placeholder="Feladat címe"
+            on:input={() => {
+              filt = fogl.feladat
+            }}></td>
           </tr>
           <tr>
             <td colspan=2 ><input class="link" type="text" bind:value={fogl.feladat_link} placeholder="Feladat link"></td>
@@ -255,7 +259,8 @@
         </table>
       </td>
       <td class="button">
-        {#if (fogl.hallg && fogl.feladat && fogl.feladat_link)}
+        {#if (fogl.hallg && fogl.feladat && fogl.feladat_link) &&Object.entries(mf).filter(a => 
+      a[0].toLowerCase().includes(filt.toLowerCase())).length == 0}
           <button on:click={async () => {
             let data = await fetch("https://szte.eu/p2.php", {
               method: 'POST',
@@ -348,7 +353,11 @@
             {#if mf[f[0]].type == '- Nincs beadva a CooSpace-en! -'}
               <span class="h">{mf[f[0]].type}</span>
             {:else}
+              {#if mf[f[0]].type == '- Feladat ütközés! -'}
+              <span class="utk">{mf[f[0]].type}</span>
+              {:else}
               <span class="done">({mf[f[0]].type})</span>:
+              {/if}
             {/if}
           {/if}
         </td>
@@ -390,6 +399,9 @@
   }
   span.h {
     font-size: 12px;
+    color: rgb(255, 126, 126);
+  }
+  span.utk {
     color: rgb(255, 126, 126);
   }
   h1 {
@@ -455,6 +467,9 @@
       color: rgb(63, 87, 241);
     }
     span.h {
+      color: rgb(185, 1, 1);
+    }
+    span.utk {
       color: rgb(185, 1, 1);
     }
     button:hover {
