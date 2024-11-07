@@ -10,12 +10,12 @@
   var filt = ""
   var st, sh
   const ft = {
+    x: "- Ellenőrzés alatt -",
     a: "Keresés, rendezés",
     b: "Rekurzzióval megoldható feladatok",
     c: "Dinamikus programozással megoldható feladat",
     d: "Fa- és gráfalgoritmusos feladatok",
-    e: "SPOJ/OKTV",
-    x: "- Ellenőrzés alatt -"
+    e: "SPOJ/OKTV"
   };
   const h = {
     "Marschall Gábor": "https://github.com/CaTwoPlus/alga_I",
