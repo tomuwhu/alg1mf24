@@ -291,6 +291,7 @@
       Object.entries(mfa).filter(a => 
         a[1].type == ft[st]
       ).forEach(v => mf[v[0]] = v[1])
+      sh = "-"
     }}>
     <option value="-">Minden típus</option>
     {#each Object.entries(ft) as type}
@@ -306,6 +307,7 @@
     Object.entries(mfa).filter(a => 
       a[1].mo.includes(sh)
     ).forEach(v => mf[v[0]] = v[1])
+    st = "-"
   }}>
   <option value="-">Minden hallgató</option>
   {#each Object.entries(h) as type}
