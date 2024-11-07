@@ -444,4 +444,22 @@
     border-radius: 15px;
     width: 257px;
   }
+  @media (prefers-color-scheme: light) {
+    td.button {
+      background-color: #e5e5e5;
+    }
+    span.done {
+      color: rgb(41, 86, 15);
+    }
+    span.x {
+      color: rgb(63, 87, 241);
+    }
+    span.h {
+      color: rgb(185, 1, 1);
+    }
+    button:hover {
+      background-color: rgb(200, 145, 138);
+      box-shadow: 1px 1px 4px black;
+    }
+  }
 </style>
