@@ -311,7 +311,13 @@
     st = "-"
   }}>
   <option value="-">Minden hallgató</option>
-  {#each Object.entries(h) as type}
+  {#each Object.entries(h).sort((a, b) => {
+    a = a[0].toUpperCase()
+    b = b[0].toUpperCase()
+    if (a[0] == "Á") return -1
+    if (a == b) return 0
+    return a < b ? -1 : 1 
+  }) as type}
     <option value={type[0]}>{type[0]}</option>
   {/each}
 </select>
