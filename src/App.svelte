@@ -266,15 +266,15 @@
             })
             data = await data.json()
             if (data.success) {
-              fogl.hallgato = fogl.hallg
-              delete fogl.hallg
-              fl.unshift(fogl)
-              fl = fl
-              fogl = {
-                hallg: '',
-                feladat: '',
-                feladat_link: ''
+              mfa[fogl.feladat] = {
+                type: ft[fogl.type]||'- Ellenőrzés alatt -',
+                fl: fogl.feladat_link,
+                mo: [fogl.hallg]
               }
+              h[fogl.hallgato] = fogl.hallgato_link
+              fogl.feladat = ''
+              fogl.feladat_link = ''
+              mf = mfa
             }
           }}>Ezt leadtam (foglalt lett)...</button>
         {/if}
