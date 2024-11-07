@@ -15,7 +15,8 @@
     b: "Rekurzzióval megoldható feladatok",
     c: "Dinamikus programozással megoldható feladat",
     d: "Fa- és gráfalgoritmusos feladatok",
-    e: "SPOJ/OKTV"
+    e: "SPOJ/OKTV",
+    h: "- Nincs beadva a CooSpace-en! -"
   };
   const h = {
     "Marschall Gábor": "https://github.com/CaTwoPlus/alga_I",
@@ -338,7 +339,11 @@
           {#if mf[f[0]].type == '- Ellenőrzés alatt -'}
           <span class="x">ellenőrzés alatt...</span>
           {:else}
-          <span class="done">({mf[f[0]].type})</span>:
+            {#if mf[f[0]].type == '- Nincs beadva a CooSpace-en! -'}
+              <span class="h">{mf[f[0]].type}</span>
+            {:else}
+              <span class="done">({mf[f[0]].type})</span>:
+            {/if}
           {/if}
         </td>
         <th>
@@ -376,6 +381,10 @@
   span.x {
     font-size: 10px;
     color: rgb(243, 186, 186);
+  }
+  span.h {
+    font-size: 12px;
+    color: rgb(255, 126, 126);
   }
   h1 {
     font-size: 20px;
