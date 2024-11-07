@@ -1,4 +1,5 @@
 <script>
+  // @ts-nocheck
   import { onMount } from "svelte";
   var fl = []
   var fogl = {
@@ -6,11 +7,6 @@
     feladat: '',
     feladat_link: ''
   }
-  onMount(async () => {
-    let data = await fetch("https://szte.eu/p1.php")
-    fl = await data.json()
-  })
-  // @ts-nocheck
   var filt = ""
   var st, sh
   const ft = {
@@ -19,6 +15,7 @@
     c: "Dinamikus programozással megoldható feladat",
     d: "Fa- és gráfalgoritmusos feladatok",
     e: "SPOJ/OKTV",
+    x: "- Ellenőrzés alatt -"
   };
   const h = {
     "Marschall Gábor": "https://github.com/CaTwoPlus/alga_I",
@@ -62,7 +59,7 @@
       mo: ["Dékány Tamás"]
     },
     "Fibonacci Modified": {
-      type: ft.c,
+      type: ft.a,
       fl: "https://www.hackerrank.com/challenges/fibonacci-modified/problem",
       mo: ["Dékány Tamás"]
     },
@@ -222,7 +219,20 @@
     ],
     ["https://stx1.spoj.com/gfx/2015e.png", "spoj", "https://www.spoj.com/"],
     ["./mester.png", "mester", "https://mester.inf.elte.hu/"],
-  ];
+  ]
+  onMount(async () => {
+    let data = await fetch("https://szte.eu/p1.php")
+    fl = await data.json()
+    fl.forEach(f => {
+      mfa[f.feladat] = {
+        type: ft[f.type]||'- Ellenőrzés alatt -',
+        fl: f.feladat_link,
+        mo: [f.hallgato]
+      }
+      h[f.hallgato] = f.hallgato_link
+    })
+    mf = mfa
+  })
 </script>
 
 <main>
@@ -304,34 +314,10 @@
 </select>
   </h1>
   <table>
-    {#each fl as ff}
-      <tr>
-        <td class=imgph>
-          {#each kisz as k}
-            {#if ff['feladat_link'].toLocaleLowerCase().includes(k[1].toLocaleLowerCase())}
-              <a href={k[2]} target="_blank">
-                <img class={k[1].toLocaleLowerCase()} src={k[0]} alt={k[1]} />
-              </a>
-            {/if}
-          {/each}
-        </td>
-        <th>
-          <a target="_blank" href={ff['feladat_link']}>{ff['feladat']}</a>
-        </th>
-        <td class="foly">
-          {#if ff['type']}
-          <span>{ft[ff['type']]}</span>
-          {:else}
-          Ellenőrzésre vár...
-          {/if}
-        </td>
-        <th>
-          <a target="_blank" href={ff['hallgato_link']}>{ff['hallgato']}</a>
-        </th>
-      </tr>
-    {/each}
     {#each Object.entries(mf).filter(a => 
-      a[0].toLowerCase().includes(filt.toLowerCase())) as f}
+      a[0].toLowerCase().includes(filt.toLowerCase())).sort((a, b) => {
+        return a[1].type < b[1].type ? -1 : 1
+      }) as f}
       <tr>
         <td class=imgph>
           {#each kisz as k}
@@ -346,7 +332,11 @@
           <a target="_blank" href={f[1].fl}>{f[0]}</a>
         </th>
         <td>
-          <span>({mf[f[0]].type})</span>:
+          {#if mf[f[0]].type == '- Ellenőrzés alatt -'}
+          <span class="x">ellenőrzés alatt...</span>
+          {:else}
+          <span class="done">({mf[f[0]].type})</span>:
+          {/if}
         </td>
         <th>
           {#each f[1].mo as hallg}
@@ -376,9 +366,13 @@
     padding: 4px;
     border:solid 1px rgb(120, 120, 120);
   }
-  span {
+  span.done {
     font-size: 10px;
     color: rgb(159, 211, 165);
+  }
+  span.x {
+    font-size: 10px;
+    color: rgb(243, 186, 186);
   }
   h1 {
     font-size: 20px;
@@ -413,10 +407,6 @@
   button {
     border: solid 1px white;
     cursor: pointer;
-  }
-  td.foly {
-    font-size: 10px;
-    color: rgb(243, 186, 186);
   }
   input.link {
     width: 650px;
