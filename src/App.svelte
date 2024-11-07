@@ -316,6 +316,7 @@
   <table>
     {#each Object.entries(mf).filter(a => 
       a[0].toLowerCase().includes(filt.toLowerCase())).sort((a, b) => {
+        if (a[1].type == b[1].type) return 0
         return a[1].type < b[1].type ? -1 : 1
       }) as f}
       <tr>
