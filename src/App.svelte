@@ -233,10 +233,13 @@
         <table>
           <tr>
             <td><input class="hallg" type="text" bind:value={fogl.hallg} placeholder="Hallgató neve"></td>
-            <td><input class="fel" type="text" bind:value={fogl.feladat} placeholder="Feladat neve"></td>
+            <td><input class="fel" type="text" bind:value={fogl.feladat} placeholder="Feladat címe"></td>
           </tr>
           <tr>
             <td colspan=2 ><input class="link" type="text" bind:value={fogl.feladat_link} placeholder="Feladat link"></td>
+          </tr>
+          <tr>
+            <td colspan=2 ><input class="link" type="text" bind:value={fogl.hallgato_link} placeholder="Hallhatói indexoldal link"></td>
           </tr>
         </table>
       </td>
@@ -316,10 +319,14 @@
           <a target="_blank" href={ff['feladat_link']}>{ff['feladat']}</a>
         </th>
         <td class="foly">
+          {#if ff['type']}
+          <span>{ft[ff['type']]}</span>
+          {:else}
           Ellenőrzésre vár...
+          {/if}
         </td>
         <th>
-          <a target="_blank" href={h[ff['hallgato']]}>{ff['hallgato']}</a>
+          <a target="_blank" href={ff['hallgato_link']}>{ff['hallgato']}</a>
         </th>
       </tr>
     {/each}
