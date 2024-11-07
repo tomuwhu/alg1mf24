@@ -229,7 +229,8 @@
       mfa[f.feladat] = {
         type: ft[f.type]||'- Ellenőrzés alatt -',
         fl: f.feladat_link,
-        mo: [f.hallgato]
+        mo: [f.hallgato],
+        ts: f.timestamp
       }
       h[f.hallgato] = f.hallgato_link
     })
@@ -274,7 +275,8 @@
               mfa[fogl.feladat] = {
                 type: ft[fogl.type]||'- Ellenőrzés alatt -',
                 fl: fogl.feladat_link,
-                mo: [fogl.hallg]
+                mo: [fogl.hallg],
+                ts: 'Most'
               }
               h[fogl.hallgato] = fogl.hallgato_link
               fogl.feladat = ''
@@ -366,12 +368,27 @@
             <a target="_blank" href={h[hallg]}>{hallg}</a>
           {/each}
         </th>
+        <td class="ts">
+          {#if f[1].ts}
+            <i>=</i> {f[1].ts}
+          {:else}
+            <b>&lt</b> 2024-11-07 06:30:00
+          {/if}
+        </td>
       </tr>
     {/each}
   </table>
 </main>
 
 <style>
+  i {
+    font-size: 12px;
+    color: rgb(255, 250, 0);
+  }
+  b {
+    font-size: 12px;
+    color: rgb(37, 84, 255);
+  }
   select {
     font-size: 16px;
     padding: 3px;
@@ -456,6 +473,10 @@
     border-radius: 15px;
     width: 257px;
   }
+  td.ts {
+    font-size: 11px;
+    color: rgb(180, 180, 180);
+  }
   @media (prefers-color-scheme: light) {
     td.button {
       background-color: #e5e5e5;
@@ -475,6 +496,10 @@
     button:hover {
       background-color: rgb(200, 145, 138);
       box-shadow: 1px 1px 4px black;
+    }
+    td.ts {
+      font-size: 11px;
+      color: rgb(80, 80, 80);
     }
   }
 </style>
