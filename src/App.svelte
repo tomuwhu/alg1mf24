@@ -221,6 +221,7 @@
     ],
     ["https://stx1.spoj.com/gfx/2015e.png", "spoj", "https://www.spoj.com/"],
     ["./mester.png", "mester", "https://mester.inf.elte.hu/"],
+    ["./mester.png", "oktatas", "https://mester.inf.elte.hu/"]
   ]
   onMount(async () => {
     let data = await fetch("https://szte.eu/p1.php")
@@ -445,7 +446,7 @@
     padding: 2px 9px;
     border-radius: 6px;
   }
-  img.mester {
+  img.mester, img.oktatas {
     width: 66px;
     border-radius: 6px;
     background-color: rgb(238, 234, 218);
