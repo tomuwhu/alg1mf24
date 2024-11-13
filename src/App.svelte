@@ -366,7 +366,11 @@
         </td>
         <th>
           {#each f[1].mo as hallg}
+            {#if h[hallg]}
             <a target="_blank" href={h[hallg]}>{hallg}</a>
+            {:else}
+              <span class="nl" title="Nem nyilvános hallgatói indexoldal">{hallg}</span>
+            {/if}
           {/each}
         </th>
         <td class="ts">
@@ -382,6 +386,13 @@
 </main>
 
 <style>
+  span.nl {
+    font-weight: 500;
+    color: #767cf2;
+    text-decoration: inherit;
+    cursor:default;
+    user-select: none;
+  }
   i {
     font-size: 12px;
     color: rgb(255, 250, 0);
