@@ -241,7 +241,7 @@
 
 <main>
   <h1>Beadott problema hozzáadása (foglalt lett....)</h1>
-  <table>
+  <table class="form">
     <tr>
       <td>
         <table>
@@ -386,6 +386,45 @@
 </main>
 
 <style>
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  table.form {
+    background-color: #877b7b;
+    border-radius: 10px;
+    position: relative;
+  }
+  table.form::after, table.form::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #a5a5a5;
+    background-image: conic-gradient(from var(--angle), transparent 80%, #1b3277);
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px inset #000000;
+    border-radius: 13px;
+    padding: 5px;
+    z-index: -1;
+    animation: 5s spin linear infinite;
+  }
+  @keyframes spin {
+    0% {
+      --angle: 0deg;
+    }
+    100% {
+      --angle: 360deg;
+    }
+  }
+  table.form::before {
+    filter: blur(5px);
+    opacity: 0.5;
+  }
   span.nl {
     font-weight: 500;
     color: #767cf2;
@@ -468,13 +507,13 @@
     cursor: pointer;
   }
   input.link {
-    width: 650px;
+    width: 824px;
   }
   input.fel {
-    width: 436px;
+    width: 560px;
   }
   input.hallg {
-    width: 200px;
+    width: 250px;
   }
   button:hover {
     background-color: rgb(123, 33, 23);
@@ -482,7 +521,8 @@
   td.button {
     text-align: center;
     background-color: #4e4949;
-    border-radius: 15px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px inset #bebebe;
     width: 257px;
   }
   td.ts {
