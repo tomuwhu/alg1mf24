@@ -33,7 +33,7 @@
       "https://github.com/bathoriendre/algoritmusok/blob/main/TaskAndDeadlines.md",
     "Kezes Rudolf Sámson": "https://github.com/Zorahk/alga_hazik",
     "Urbán Ákos": "https://github.com/akosh25/algoritmusok",
-    "Sámfira Gábor":
+    "Számfira Gábor":
       "https://github.com/Infinity42o/L-Algoritmusok-s-adatszerkezetek",
   };
   var mf
@@ -173,22 +173,22 @@
     "Gridland Metro": {
       type: ft.a,
       fl: "https://www.hackerrank.com/challenges/gridland-metro/problem",
-      mo: ["Sámfira Gábor"],
+      mo: ["Számfira Gábor"],
     },
     "Crossword Puzzle": {
       type: ft.b,
       fl: "https://www.hackerrank.com/challenges/crossword-puzzle/problem",
-      mo: ["Sámfira Gábor"],
+      mo: ["Számfira Gábor"],
     },
     "Sherlock and Cost": {
       type: ft.c,
       fl: "https://www.hackerrank.com/challenges/sherlock-and-cost/problem",
-      mo: ["Sámfira Gábor"],
+      mo: ["Számfira Gábor"],
     },
     "Even Tree": {
       type: ft.d,
       fl: "https://www.hackerrank.com/challenges/even-tree/problem",
-      mo: ["Sámfira Gábor"],
+      mo: ["Számfira Gábor"],
     },
     "Lily's Homework": {
       type: ft.a,
