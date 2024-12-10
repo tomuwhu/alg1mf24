@@ -11,11 +11,11 @@
   var st, sh
   const ft = {
     x: "- Ellenőrzés alatt -",
-    a: "Keresés, rendezés",
-    b: "Rekurzzióval megoldható feladatok",
-    c: "Dinamikus programozással megoldható feladat",
-    d: "Fa- és gráfalgoritmusos feladatok",
-    e: "SPOJ/OKTV",
+    a: "1. Keresés, rendezés",
+    b: "2. Rekurzzióval megoldható feladatok",
+    c: "3. Dinamikus programozással megoldható feladat",
+    d: "4. Fa- és gráfalgoritmusos feladatok",
+    e: "5. SPOJ/OKTV",
     h: "- Nincs beadva a CooSpace-en! -",
     u: "- Feladat ütközés! -"
   };
@@ -220,8 +220,8 @@
       "https://www.hackerrank.com/",
     ],
     ["https://stx1.spoj.com/gfx/2015e.png", "spoj", "https://www.spoj.com/"],
-    ["./mester.png", "mester", "https://mester.inf.elte.hu/"],
-    ["./mester.png", "oktatas", "https://mester.inf.elte.hu/"]
+    ["./mester.png", "oktatas", "https://mester.inf.elte.hu/"],
+    ["./mester.png", "elte", "https://mester.inf.elte.hu/"]
   ]
   onMount(async () => {
     let data = await fetch("https://szte.eu/p1.php")
@@ -496,7 +496,7 @@
     padding: 2px 9px;
     border-radius: 6px;
   }
-  img.mester, img.oktatas {
+  img.oktatas, img.elte {
     width: 66px;
     border-radius: 6px;
     background-color: rgb(238, 234, 218);
