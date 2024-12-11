@@ -22,7 +22,7 @@
   const h = {
     "Marschall Gábor": "https://github.com/CaTwoPlus/alga_I",
     "Rafael Anita Ilona": "https://r-anita.github.io/Alga/",
-    "Dr. Nébl Anita": "https://nebl-annamaria.github.io/",
+    "Dr. Nébl Annamária": "https://nebl-annamaria.github.io/",
     "Béleczki Ádám": "https://github.com/Adee81/Algoritmusok/tree/main/04_Fak_Grafok",
     "Ádám Róbert Gábor": "https://adamrobert77.github.io/L_Algoritmusok_es_adatszerkezetek_I/",
     "Temesvári Ráhel Anna": "https://rahelanna.github.io/Algoritmusok-es-adatszerkezetek/",
@@ -78,7 +78,7 @@
     "Apartments": {
       type: ft.a,
       fl: "https://cses.fi/problemset/task/1084",
-      mo: ["Dr. Nébl Anita"]
+      mo: ["Dr. Nébl Annamária"]
     },
     "KnightL on a Chessboard": {
       type: ft.a,
