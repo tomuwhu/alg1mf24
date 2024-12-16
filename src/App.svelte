@@ -240,6 +240,7 @@
 </script>
 
 <main>
+  {#if false}
   <h1>Beadott problema hozzáadása (foglalt lett....)</h1>
   <table class="form">
     <tr>
@@ -289,6 +290,7 @@
       </td>
     </tr>
   </table>
+  {/if}
   <h1>Leadott (elkelt) feladatok:<br>
   <input type="text" bind:value={filt} placeholder="Szűrés"> - 
   <select bind:value={st} on:change={() => {
