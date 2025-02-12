@@ -16,6 +16,7 @@
     c: "3. Dinamikus programozással megoldható feladat",
     d: "4. Fa- és gráfalgoritmusos feladatok",
     e: "5. SPOJ/OKTV",
+    f: "Alga2 többletpont",
     h: "- Nincs beadva a CooSpace-en! -",
     u: "- Feladat ütközés! -"
   };
@@ -240,8 +241,8 @@
 </script>
 
 <main>
-  {#if false}
-  <h1>Beadott problema hozzáadása (foglalt lett....)</h1>
+  {#if true}
+  <h1>Probléma hozzáadása (foglalt lett....)</h1>
   <table class="form">
     <tr>
       <td>
