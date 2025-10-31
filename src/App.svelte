@@ -220,7 +220,7 @@
       "hackerrank",
       "https://www.hackerrank.com/",
     ],
-    ["https://stx1.spoj.com/gfx/2015e.png", "spoj", "https://www.spoj.com/"],
+    ["./2015e.png", "spoj", "https://www.spoj.com/"],
     ["./mester.png", "oktatas", "https://mester.inf.elte.hu/"],
     ["./mester.png", "elte", "https://mester.inf.elte.hu/"]
   ]
